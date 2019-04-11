@@ -228,13 +228,13 @@ def user_stats(df):
 def see_raw_data(df):
 #it diplays raw dat in cremental fashion to the enduser. They can enter yes to view more data or enter No to quit the function.  
     num = 0
-    ch = input("Enter yes if you want to see raw data")
-    if ch.lower() =='yes':
+    choice = input("Enter yes if you want to see raw data")
+    if choice.lower() =='yes':
         while True:
             num = num + 5
             print(df.head(num))
-            choice = input('\nWould you like to see more raw data? Enter yes or no.\n')
-            if choice.lower() !='yes':
+            continue_or_not = input('\nWould you like to see more raw data? Enter yes or no.\n')
+            if continue_or_not.lower() !='yes':
                 break
 
 
