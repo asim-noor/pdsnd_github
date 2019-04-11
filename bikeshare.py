@@ -185,8 +185,8 @@ def trip_duration_stats(df):
 
     # displaying total travel time
        
-    a  = df['Trip Duration'].sum()
-    minutes = a / 60
+    total  = df['Trip Duration'].sum()
+    minutes = total / 60
     hours = minutes / 60
     days = hours /24
     print('Total trips duration in Seconds is: {}, in Minutes is: {}, in Hours {},  and in Days is: {}'.format(a, minutes, hours, days))
