@@ -14,5 +14,5 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-
+I am thankfull the Udacity instructors, stackoverflow contributors and youtube contributors, who have helped me learn new skill. I have also greatly benefitted from git documentation. 
 
