@@ -158,15 +158,15 @@ def station_stats(df):
     # displaying most frequent combination of start station and end station trip
     print('The most commonly used End Station is: ', df.loc[:,'End Station'].value_counts().head(1))
    
-    df1 = pd.crosstab(df['Start Station'], df['End Station'])
+    df_temp = pd.crosstab(df['Start Station'], df['End Station'])
     ind =0
     col =0
     col_val = 0
-    for c in df1.columns:
-        if col_val < df1.loc[:,c].max():
-            col_val = df1.loc[:,c].max()
+    for c in df_temp.columns:
+        if col_val < df_temp.loc[:,c].max():
+            col_val = df_temp.loc[:,c].max()
             col = c
-            ind = df1[c].idxmax()
+            ind = df_temp[c].idxmax()
 
     print('The most commone trip is between: ', ind, " and ", col, 'with ', col_val, 'trips between the stations')
 
@@ -183,8 +183,8 @@ def trip_duration_stats(df):
 
     # displaying total travel time
        
-    a  = df['Trip Duration'].sum()
-    minutes = a / 60
+    total  = df['Trip Duration'].sum()
+    minutes = total / 60
     hours = minutes / 60
     days = hours /24
     print('Total trips duration in Seconds is: {}, in Minutes is: {}, in Hours {},  and in Days is: {}'.format(a, minutes, hours, days))
@@ -226,13 +226,13 @@ def user_stats(df):
 def see_raw_data(df):
 #it diplays raw dat in cremental fashion to the enduser. They can enter yes to view more data or enter No to quit the function.  
     num = 0
-    ch = input("Enter yes if you want to see raw data")
-    if ch.lower() =='yes':
+    choice = input("Enter yes if you want to see raw data")
+    if choice.lower() =='yes':
         while True:
             num = num + 5
             print(df.head(num))
-            choice = input('\nWould you like to see more raw data? Enter yes or no.\n')
-            if choice.lower() !='yes':
+            continue_or_not = input('\nWould you like to see more raw data? Enter yes or no.\n')
+            if continue_or_not.lower() !='yes':
                 break
 
 
