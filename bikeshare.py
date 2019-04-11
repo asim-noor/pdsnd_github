@@ -160,15 +160,15 @@ def station_stats(df):
     # displaying most frequent combination of start station and end station trip
     print('The most commonly used End Station is: ', df.loc[:,'End Station'].value_counts().head(1))
    
-    df1 = pd.crosstab(df['Start Station'], df['End Station'])
+    df_temp = pd.crosstab(df['Start Station'], df['End Station'])
     ind =0
     col =0
     col_val = 0
-    for c in df1.columns:
-        if col_val < df1.loc[:,c].max():
-            col_val = df1.loc[:,c].max()
+    for c in df_temp.columns:
+        if col_val < df_temp.loc[:,c].max():
+            col_val = df_temp.loc[:,c].max()
             col = c
-            ind = df1[c].idxmax()
+            ind = df_temp[c].idxmax()
 
     print('The most commone trip is between: ', ind, " and ", col, 'with ', col_val, 'trips between the stations')
 
