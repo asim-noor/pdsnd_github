@@ -16,9 +16,7 @@ def get_month(month):
     for key, value in MONTH_DATA.items():
         if value == month:
             return key.title()
-#You can use the inbuilt .lower() function to convert raw inputs to lowercase before checking/processing them. 
-#This way your script should allow users to handle input in lower/uppercase.
-#Do the same for month and day filters as well.
+			
 
 def get_filters():
     """
