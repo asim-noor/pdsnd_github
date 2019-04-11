@@ -5,7 +5,7 @@ The project is created on 11th April 2019.
 Bikeshare Data Analysis of Three US Cities
 
 ### Description
-Describe what your project is about and what it does
+The project analyzes Bikeshare data of three US cities namely: Washington, New York City and Chicago. Basic analysis performed as per course requirement.  
 
 ### Files used
 Include the files used
