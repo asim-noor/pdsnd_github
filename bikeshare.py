@@ -48,7 +48,7 @@ def get_filters():
     #get user input for month (all, january, february, ... , june)
     #while loop to get input month
 ||||||| .merge_file_a15232
-    # TO DO: get user input for month (all, january, february, ... , june)
+    #get user input for month (all, january, february, ... , june)
     #second while loop to get input month
 =======
     #get user input for month (all, january, february, ... , june)
